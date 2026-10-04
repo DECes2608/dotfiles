@@ -4,8 +4,8 @@
   "height": 26,
   "spacing": 2,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["tray", "pulseaudio", "network", "custom/bluetooth"],
+  "modules-center": ["mpris"],
+  "modules-right": ["tray", "pulseaudio", "clock"],
 
 "hyprland/workspaces": {
   "format": "{id}",
@@ -17,6 +17,19 @@
   "format": "{}",
   "max-length": 40,
   "separate-outputs": true
+},
+
+"mpris": {
+    "format": "{status_icon} {title}",
+    "format-paused": "{status_icon} {title}",
+    "status-icons": {
+        "playing": "▶",
+        "paused": "⏸"
+    },
+    "max-length": 30,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous"
 },
 
   "custom/warp": {
@@ -43,8 +56,8 @@
   },
 
   "clock": {
-    "format": "{:%H:%M}",
-    "locale": "tr_TR.utf8",
+    "format": "{:%I:%M %p}",
+    "locale": "en_US.utf8",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 

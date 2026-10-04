@@ -4,7 +4,15 @@ hl.window_rule({
 	match = {
 		class = "librewolf",
 	},
-	workspace = 2,
+	workspace = 5,
+})
+
+hl.window_rule({
+	name = "nautilus",
+	match = {
+		class = "org.gnome.Nautilus",
+	},
+	opacity = 0.85,
 })
 
 hl.window_rule({
@@ -21,6 +29,16 @@ hl.window_rule({
 	name = "pavucontrol",
 	match = {
 		class = "org.pulseaudio.pavucontrol",
+	},
+	float = true,
+	size = { "monitor_w * 0.4", "monitor_h * 0.6" },
+	center = true,
+})
+
+hl.window_rule({
+	name = "desktop portal",
+	match = {
+		class = "xdg-desktop-portal-gtk",
 	},
 	float = true,
 	size = { "monitor_w * 0.4", "monitor_h * 0.6" },
@@ -55,15 +73,6 @@ hl.window_rule({
 		class = "steam",
 	},
 	workspace = 4,
-})
-
-hl.window_rule({
-	name = "nautilus",
-	match = {
-		class = "nautilus",
-	},
-	workspace = 3,
-	opacity = 0.85,
 })
 
 -- nvim → workspace 5

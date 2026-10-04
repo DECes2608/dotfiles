@@ -21,8 +21,17 @@ hl.config({
 
 	decoration = {
 		rounding = 0,
-		shadow = { enabled = false },
-		--        blur     = { enabled = false },
+		shadow = {
+			enabled = true,
+			range = 8,
+			render_power = 2,
+			color = "rgba(00000066)",
+		},
+		blur = {
+			enabled = true,
+			size = 6,
+			passes = 3,
+		},
 	},
 
 	group = {

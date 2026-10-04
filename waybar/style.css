@@ -33,6 +33,7 @@ window#waybar {
     transition: color 0.2s ease;
 }
 
+#mpris:hover,
 #clock:hover,
 #tray:hover,
 #memory:hover,
